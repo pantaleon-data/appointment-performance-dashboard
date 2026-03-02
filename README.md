@@ -12,7 +12,7 @@ The analysis integrates three structured datasets: an appointments dataset conta
 
 ## Technical Stack
 Microsoft Excel was used for the full analytical workflow, including data modeling across multiple datasets, pivot table aggregation, calculated fields, and dashboard visualization development.
-![](images/appointment_datamodel.png) 
+
 ---
 
 ## Executive Summary
