@@ -11,11 +11,14 @@ Microsoft Excel was used for the full analytical workflow, including data modeli
 
 ![](images/appointment_datamodel.png)
 
+---
+
 ## Executive Summary
 The analysis reviewed 111,042 scheduled appointments, of which 86,032 appointments (77.2%) were successfully attended, demonstrating generally strong patient engagement. However, operational losses remain significant, with 18,254 cancellations (16.4%) and 6,615 missed appointments (5.9% no-show rate) affecting clinic utilization. Attendance volume was highest during afternoon appointment slots, accounting for 36,547 attended visits, compared to 34,388 morning attendances and 15,097 night visits, highlighting mid-day operational concentration. Gender distribution showed that female patients attended 51,096 appointments, representing approximately 59% of total attendances, while male patients accounted for 34,936 attended visits. Quarterly attendance remained relatively stable, with typical quarterly attendance ranging between 21,181 and 21,747 attended visits per quarter in early reporting periods, indicating consistent operational demand without major seasonal disruptions.
 
 ![](images/kpi.png)
 
+---
 ## Insights Deep Dive
 
 Attendance behavior remained operationally stable across months, with monthly attended visits consistently ranging between approximately 6661 and 7394 completed appointments during early reporting periods. The absence of extreme spikes or sharp declines suggests steady clinic demand and predictable patient flow, supporting stable workforce scheduling and capacity planning assumptions.  
