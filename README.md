@@ -19,27 +19,38 @@ The analysis reviewed 111,042 scheduled appointments, of which 86,032 appointmen
 ![](images/kpi.png)
 
 ---
+
 ## Insights Deep Dive
 
 Attendance behavior remained operationally stable across months, with monthly attended visits consistently ranging between approximately 6661 and 7394 completed appointments during early reporting periods. The absence of extreme spikes or sharp declines suggests steady clinic demand and predictable patient flow, supporting stable workforce scheduling and capacity planning assumptions.  
 
 ![](images/monthly_trend.png)
 
+===
+
 Peak-time analysis demonstrated that clinic activity was heavily concentrated in afternoon sessions, where 36,547 attended visits were recorded compared to 34,388 morning attendances and 8,666 night visits. Cancellation and no-show patterns followed a similar distribution, indicating that operational congestion and patient availability likely influence appointment outcomes during high-volume time windows.  
 
 ![](images/peak_time_analysis.png)
+
+---
 
 Quarterly attendance analysis confirmed consistent service utilization, with attended visits remaining within a narrow operational band across quarters. For example, quarterly attended visits in early reporting periods ranged from 21,181 to 21,747 appointments, reinforcing the absence of strong seasonal volatility and suggesting predictable service demand across the calendar year.  
 
 ![](images/quarterly_attendance.png)
 
+---
+
 Age-group analysis revealed that attendance volume increased steadily through early adulthood into middle-age brackets, with patients aged 30–34 recording 5,810 attended visits and the 35–39 group recording 5,708 attendances, significantly higher than the 1,866 attendances recorded among patients aged 15–19. The trend suggests that healthcare utilization intensifies with age until mid-life before gradually stabilizing, indicating demographic differences in service demand rather than attendance reliability.  
 
 ![](images/age_group_attendance.png)
 
+---
+
 Gender-based appointment analysis showed that female patients accounted for the majority of clinic utilization, with 51,096 attended visits compared to 34,936 male attendances. Cancellation and no-show distributions followed similar gender proportions, indicating that attendance disparities were primarily driven by utilization volume rather than behavioral differences between genders.  
 
 ![](images/appointment_by_gender.png)
+
+---
 
 ## Recommendations
 Healthcare facilities should prioritize operational resource allocation toward afternoon clinic sessions, where patient demand and attendance volume are highest, to minimize congestion-related delays and cancellations. Appointment reminder systems and rescheduling automation should target the 24.3% combined cancellation and no-show population, as reducing these losses would significantly improve operational efficiency. Scheduling strategies should incorporate demographic demand patterns, particularly among patients aged 30–39, who demonstrate the highest utilization volumes and therefore represent the greatest opportunity for workflow optimization. Gender utilization trends indicate that outreach and preventive care campaigns may benefit from targeted engagement strategies toward male patients, who demonstrate lower absolute attendance volumes. Finally, ongoing monthly attendance monitoring should remain integrated into operational dashboards to track attendance improvements and detect emerging scheduling inefficiencies early.
