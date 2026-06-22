@@ -1,4 +1,4 @@
-# Appointment Flow and Efficiency Tracker
+# Appointment Performance Dashboard
 
 ## Background and Overview
 Healthcare facilities frequently experience operational inefficiencies caused by missed appointments, late cancellations, and rescheduling patterns that disrupt clinic capacity planning. This project analyzes 111,042 healthcare appointment records to evaluate attendance behavior across demographic segments, appointment periods, and scheduling patterns. The dashboard was designed to help hospital administrators understand attendance performance, identify high-risk no-show segments, and optimize scheduling efficiency. By examining attendance status, peak visit times, monthly utilization trends, and demographic attendance behavior, the analysis provides a structured operational perspective on patient engagement and appointment reliability.
