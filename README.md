@@ -11,7 +11,11 @@ Using Microsoft Excel and Power Query, the dataset was transformed, enriched, an
 The resulting dashboard provides a high-level overview of appointment outcomes while supporting detailed investigation into attendance trends, patient demographics, and operational performance.
 
 ---
+## Dashboard Preview
 
+![](images/appointment_dashboard.png)
+
+---
 ## Data Structure Overview
 
 The dataset contains healthcare appointment records spanning multiple years and captures patient attendance behavior, scheduling information, and appointment characteristics.
@@ -110,8 +114,6 @@ Demographic analysis shows that patients aged 50–79 account for the largest sh
 Operational analysis reveals that most appointments are completed within 30 minutes, indicating efficient service delivery and consistent appointment management practices.
 
 Overall, the findings suggest a healthcare operation characterized by stable appointment demand, improved appointment outcomes, and efficient service delivery, while also highlighting opportunities to better understand the decline in overall appointment volumes.
-
-![](images/appointment_dashboard.png)
 
 ---
 
