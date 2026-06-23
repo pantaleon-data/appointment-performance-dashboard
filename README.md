@@ -1,52 +1,229 @@
 # Appointment Performance Dashboard
 
 ## Background and Overview
-Healthcare facilities frequently experience operational inefficiencies caused by missed appointments, late cancellations, and rescheduling patterns that disrupt clinic capacity planning. This project analyzes 111,042 healthcare appointment records to evaluate attendance behavior across demographic segments, appointment periods, and scheduling patterns. The dashboard was designed to help hospital administrators understand attendance performance, identify high-risk no-show segments, and optimize scheduling efficiency. By examining attendance status, peak visit times, monthly utilization trends, and demographic attendance behavior, the analysis provides a structured operational perspective on patient engagement and appointment reliability.
 
-![](images/appointment_dashboard.png)
+Efficient appointment management is critical to healthcare operations. Missed appointments, cancellations, and scheduling inefficiencies can reduce resource utilization, increase operational costs, and negatively impact patient care outcomes.
+
+This project analyzes healthcare appointment data to evaluate attendance patterns, patient demographics, scheduling efficiency, and year-over-year performance trends. The objective is to provide stakeholders with a comprehensive view of appointment performance while identifying opportunities to improve attendance rates, optimize scheduling, and enhance operational efficiency.
+
+Using Microsoft Excel and Power Query, the dataset was transformed, enriched, and visualized through an interactive dashboard. Additional feature engineering was performed to create meaningful age-group segments and appointment duration categories, enabling deeper analysis of patient behavior and appointment patterns.
+
+The resulting dashboard provides a high-level overview of appointment outcomes while supporting detailed investigation into attendance trends, patient demographics, and operational performance.
+
+---
 
 ## Data Structure Overview
-The analysis integrates three structured datasets: an appointments dataset containing 111,042 appointment records, a patients dataset containing demographic attributes such as gender and age group classifications, and a slots dataset defining appointment scheduling periods (morning, afternoon, evening). Each row in the primary appointments table represents a scheduled patient encounter, including appointment date, attendance status (attended, cancelled, did not attend, rescheduled/scheduled), and references to patient and slot information. Age groups were categorized from 15–19 through 90+, enabling demographic segmentation, while time-based fields supported monthly and quarterly attendance analysis. Relationships between appointments, patients, and slots enabled a structured data model that supported KPI calculations, time-based aggregations, and demographic attendance analysis across operational dimensions.  
+
+The dataset contains healthcare appointment records spanning multiple years and captures patient attendance behavior, scheduling information, and appointment characteristics.
+
+Each record represents an individual appointment and includes information relating to patient demographics, appointment outcomes, scheduling times, and appointment duration.
+
+### Key Fields
+
+**Appointment Date**
+Date on which the appointment occurred.
+
+**Appointment Status**
+Outcome of the appointment, including attended, cancelled, no-show, and rescheduled appointments.
+
+**Gender**
+Patient gender classification.
+
+**Age**
+Patient age at the time of the appointment.
+
+**Start Time & End Time**
+Appointment start and completion times.
+
+**Appointment Duration**
+Length of appointment calculated from the difference between start and end times.
+
+### Feature Engineering
+
+To improve analytical depth, additional fields were created using Power Query:
+
+**Age Group**
+
+* 0–17
+* 18–34
+* 35–49
+* 50–64
+* 65–79
+* 80+
+
+**Appointment Duration Group**
+
+* 0–15 minutes
+* 16–30 minutes
+* 31–45 minutes
+* 46–60 minutes
+
+These engineered features enabled demographic and operational efficiency analysis that would not have been possible using raw fields alone.
+
+---
 
 ## Technical Stack
-Microsoft Excel was used for the full analytical workflow, including data modeling across multiple datasets, pivot table aggregation, calculated fields, and dashboard visualization development.
 
-![](images/appointment_datamodel.png)
+The entire project was completed using Microsoft Excel.
+
+### Data Preparation
+
+* Power Query
+* Data Cleaning
+* Data Transformation
+* Feature Engineering
+
+### Analysis Techniques
+
+* Year-over-Year (YoY) Analysis
+* KPI Tracking
+* Trend Analysis
+* Demographic Segmentation
+* Operational Performance Analysis
+
+### Dashboard Components
+
+* KPI Cards
+* Lollipop Charts
+* Clustered Column Charts
+* Line Charts
+* Donut Charts
+* Interactive Slicers
+
+### Advanced Excel Features
+
+* Power Query transformations
+* Dynamic KPI calculations
+* Year-over-Year performance measures
+* Interactive dashboard filtering
 
 ---
 
 ## Executive Summary
-The analysis reviewed 111,042 scheduled appointments, of which 86,032 appointments (77.2%) were successfully attended, demonstrating generally strong patient engagement. However, operational losses remain significant, with 18,254 cancellations (16.4%) and 6,615 missed appointments (5.9% no-show rate) affecting clinic utilization. Attendance volume was highest during afternoon appointment slots, accounting for 36,547 attended visits, compared to 34,388 morning attendances and 15,097 night visits, highlighting mid-day operational concentration. Gender distribution showed that female patients attended 51,096 appointments, representing approximately 59% of total attendances, while male patients accounted for 34,936 attended visits. Quarterly attendance remained relatively stable, with typical quarterly attendance ranging between 21,181 and 21,747 attended visits per quarter in early reporting periods, indicating consistent operational demand without major seasonal disruptions.
 
-![](images/kpi.png)
+The analysis reveals that appointment attendance remains strong, with approximately 8,000 completed appointments recorded during the reporting period. While attendance volumes declined by 7% year-over-year, appointment cancellations and no-show rates also decreased, suggesting improvements in scheduling reliability and patient commitment.
+
+Attendance activity is concentrated during morning and afternoon periods, indicating peak demand windows that healthcare administrators can leverage for staffing and resource allocation decisions.
+
+Demographic analysis shows that patients aged 50–79 account for the largest share of appointments, highlighting the importance of serving older patient populations who typically require more frequent healthcare engagement.
+
+Operational analysis reveals that most appointments are completed within 30 minutes, indicating efficient service delivery and consistent appointment management practices.
+
+Overall, the findings suggest a healthcare operation characterized by stable appointment demand, improved appointment outcomes, and efficient service delivery, while also highlighting opportunities to better understand the decline in overall appointment volumes.
+
+![](images/appointment_dashboard.png)
 
 ---
 
 ## Insights Deep Dive
 
-Attendance behavior remained operationally stable across months, with monthly attended visits consistently ranging between approximately 6661 and 7394 completed appointments during early reporting periods. The absence of extreme spikes or sharp declines suggests steady clinic demand and predictable patient flow, supporting stable workforce scheduling and capacity planning assumptions.  
+### Appointment Performance
 
-![](images/monthly_trend.png)
+A total of approximately **8,000 appointments were successfully attended**, making completed visits the dominant appointment outcome.
 
-===
+Appointment attendance declined by **7% year-over-year**, indicating a reduction in patient visit volume compared to the previous year. However, the decline in attendance was accompanied by reductions in undesirable appointment outcomes.
 
-Peak-time analysis demonstrated that clinic activity was heavily concentrated in afternoon sessions, where 36,547 attended visits were recorded compared to 34,388 morning attendances and 8,666 night visits. Cancellation and no-show patterns followed a similar distribution, indicating that operational congestion and patient availability likely influence appointment outcomes during high-volume time windows.  
+Cancelled appointments fell to approximately **1,700 appointments**, representing a **9% year-over-year decrease**.
+
+No-show appointments decreased to **636 appointments**, representing an **11% year-over-year reduction**.
+
+This is a positive operational signal. While overall appointment volume declined, patient reliability improved, resulting in fewer missed appointments and less scheduling disruption.
+
+A new appointment status category, **Rescheduled**, emerged in 2024 with **141 recorded appointments**, providing additional visibility into patient scheduling behavior that was previously unavailable.
 
 ---
 
-Quarterly attendance analysis confirmed consistent service utilization, with attended visits remaining within a narrow operational band across quarters. For example, quarterly attended visits in early reporting periods ranged from 21,181 to 21,747 appointments, reinforcing the absence of strong seasonal volatility and suggesting predictable service demand across the calendar year.  
+### Peak Appointment Periods
+
+Appointment demand is heavily concentrated during daytime hours.
+
+The **Afternoon period recorded the highest appointment volume at 47.1K appointments**, making it the busiest service window.
+
+Morning appointments followed closely with **44.5K appointments**, while Evening appointments accounted for **19.4K appointments**.
+
+Together, morning and afternoon appointments represent the overwhelming majority of appointment activity, suggesting that healthcare resources and staffing requirements should remain concentrated during these periods.
+
+The significantly lower evening demand may present opportunities for schedule optimization or targeted initiatives to increase utilization during off-peak hours.
 
 ---
 
-Age-group analysis revealed that attendance volume increased steadily through early adulthood into middle-age brackets, with patients aged 30–34 recording 5,810 attended visits and the 35–39 group recording 5,708 attendances, significantly higher than the 1,866 attendances recorded among patients aged 15–19. The trend suggests that healthcare utilization intensifies with age until mid-life before gradually stabilizing, indicating demographic differences in service demand rather than attendance reliability.  
+### Patient Demographics
 
+Appointment attendance increases steadily across age groups before peaking among older patients.
+
+The largest patient segment is **65–79 years**, generating **28.9K appointments**.
+
+This is followed by:
+
+* 50–64 years: **26.1K appointments**
+* 35–49 years: **19.9K appointments**
+* 18–34 years: **18.6K appointments**
+* 80+ years: **17.0K appointments**
+* 0–17 years: **1.2K appointments**
+* 
 ![](images/age_group_attendance.png)
 
+These findings indicate that older adults account for the majority of healthcare utilization within the dataset.
+
+Patients aged **50–79 alone generate approximately 55,000 appointments**, making them the most significant patient population from an operational planning perspective.
+
 ---
 
-Gender-based appointment analysis showed that female patients accounted for the majority of clinic utilization, with 51,096 attended visits compared to 34,936 male attendances. Cancellation and no-show distributions followed similar gender proportions, indicating that attendance disparities were primarily driven by utilization volume rather than behavioral differences between genders.
+### Gender Distribution
+
+Healthcare utilization is relatively balanced across genders, though female patients account for a larger share of appointments.
+
+Female patients represent **59% of total attendance**, while male patients account for **41%**.
+
+This suggests higher healthcare engagement among female patients and may inform future outreach, preventive care programs, and patient engagement initiatives.
+
+---
+
+### Appointment Duration Analysis
+
+Most appointments are completed within relatively short timeframes.
+
+The **0–15 minute duration group** recorded the highest appointment volume, with **4.3K appointments in 2023** and **4.0K appointments in 2024**.
+
+The **16–30 minute category** followed closely with **3.1K appointments in 2023** and **2.9K appointments in 2024**.
+
+Longer appointments become progressively less common:
+
+* 31–45 minutes: 1.1K (2023) vs 1.0K (2024)
+* 46–60 minutes: 103 (2023) vs 82 (2024)
+
+These results indicate that the healthcare facility primarily handles short-duration appointments, suggesting efficient consultation workflows and effective appointment scheduling practices.
+
+---
+
+### Attendance Trend Analysis
+
+Monthly attendance remained relatively stable throughout most of 2023 and 2024, generally fluctuating between approximately 800 and 1,000 appointments per month.
+
+The trend lines show consistent appointment activity across the majority of the reporting period, indicating predictable demand patterns and stable operational workloads.
+
+However, December 2024 experienced a significant decline, dropping to **166 appointments**, compared to **917 appointments in November 2024**.
+
+This sharp decline may reflect seasonal effects, reporting limitations, holiday scheduling patterns, or reduced patient demand during year-end periods and warrants further investigation.
+
+![](images/monthly_trend.png)
 
 ---
 
 ## Recommendations
-Healthcare facilities should prioritize operational resource allocation toward afternoon clinic sessions, where patient demand and attendance volume are highest, to minimize congestion-related delays and cancellations. Appointment reminder systems and rescheduling automation should target the 24.3% combined cancellation and no-show population, as reducing these losses would significantly improve operational efficiency. Scheduling strategies should incorporate demographic demand patterns, particularly among patients aged 30–39, who demonstrate the highest utilization volumes and therefore represent the greatest opportunity for workflow optimization. Gender utilization trends indicate that outreach and preventive care campaigns may benefit from targeted engagement strategies toward male patients, who demonstrate lower absolute attendance volumes. Finally, ongoing monthly attendance monitoring should remain integrated into operational dashboards to track attendance improvements and detect emerging scheduling inefficiencies early.
+
+* Investigate the drivers behind the 7% decline in attended appointments despite improvements in cancellation and no-show rates.
+
+* Prioritize staffing and resource allocation during morning and afternoon periods, where appointment demand is highest.
+
+* Develop targeted healthcare programs for patients aged 50–79, the largest and most active patient segment.
+
+* Explore strategies to improve utilization during evening appointment periods.
+
+* Monitor the newly introduced rescheduled appointment category to identify emerging scheduling patterns.
+
+* Continue initiatives that reduce cancellations and no-shows, as both metrics improved year-over-year.
+
+* Investigate the sharp decline in December 2024 attendance to determine whether seasonal factors or operational issues contributed.
+
+* Maintain current scheduling practices, as the predominance of short-duration appointments suggests efficient appointment management.
